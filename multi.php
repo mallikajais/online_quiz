@@ -42,7 +42,7 @@ $language=$_GET['id'];
 $id = isset($_GET['id'])?$_GET['id']:1;
 $qno=1;
 $count=0;
-$sql="SELECT * FROM `question` WHERE `language`='$language' ";
+$sql="SELECT * FROM `question` WHERE `language`='$language' ORDER BY RAND() ";
 $data=mysqli_query($conn,$sql);
 while($row = mysqli_fetch_array($data))
 {   $count++;
@@ -63,11 +63,11 @@ while($row = mysqli_fetch_array($data))
 
 
 <div class="tab">Question:
-<p><input class="inp" value="<?php echo $question; ?>" style="border:none;" ></p> <br>
-<p><input type="radio" name="question<?php echo $count;?>"  value="<?php echo $op1; ?>"/> <?php echo $op1; ?></p> 
-<p><input type="radio" name="question<?php echo $count;?>"  value="<?php echo $op2; ?>"/> <?php echo $op2; ?> </p>
-<p><input type="radio" name="question<?php echo $count;?>"  value="<?php echo $op3; ?>"/> <?php echo $op3; ?></p>
-<p><input type="radio" name="question<?php echo $count;?>"  value="<?php echo $op4; ?>"/> <?php echo $op4; ?></p>
+<p><input class="inp" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" value="<?php echo $question; ?>" style="border:none;" ></p> <br>
+<p><input type="radio" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" name="question <?php echo $count;?>"  value="<?php echo $op1; ?>"/> <?php echo $op1; ?></p> 
+<p><input type="radio" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" name="question<?php echo $count;?>"  value="<?php echo $op2; ?>"/> <?php echo $op2; ?> </p>
+<p><input type="radio" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" name="question<?php echo $count;?>"  value="<?php echo $op3; ?>"/> <?php echo $op3; ?></p>
+<p><input type="radio" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" name="question<?php echo $count;?>"  value="<?php echo $op4; ?>"/> <?php echo $op4; ?></p>
   
 </div>
 <?php
