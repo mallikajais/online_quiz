@@ -1,9 +1,9 @@
-<?php include 'header.php';?>
-<div style="margin-top:3%;">
+<?php include 'head.php';?>
+<div style="margin-top:30px;">
     <form>
         <div class="form-group">
             <label>Technology</label>
-            <select class="form-control" id="lang" name="lang">
+            <select class="form-control" id="language" name="language">
                 <option>select language</option>
                 <option>php</option>
                 <option>python</option>
@@ -31,7 +31,7 @@
 <script>
 $(document).ready(function(){
         $('#add').click(function(){
-            var language=$('#lang').val();
+            var language=$('#language').val();
             var question=$('#question').val(); 
             var option1=$('#option1').val(); 
             var option2=$('#option2').val(); 

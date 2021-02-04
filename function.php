@@ -20,6 +20,7 @@ class test extends dbcon{
     }
 
     public function addquestion($language,$question,$option1,$option2,$option3,$option4,$answer){
+        // $sql="SELECT `topic`.*,`question`.* FROM question JOIN topic ON `topic`.`topic` = `question`.`language` ";
         $sql = "INSERT INTO question ( language,question,option1,option2,option3,option4,answer)
         VALUES ('$language','$question','$option1','$option2','$option3','$option4','$answer')";
         $data=$this->conn->query($sql);

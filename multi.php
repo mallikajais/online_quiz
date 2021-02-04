@@ -10,7 +10,6 @@ include_once 'dbcon.php' ;
 	width: 70%;
 	min-width: 300px;
   }
-
    .inp {
 	padding: 10px;
 	width: 100%;
@@ -39,10 +38,11 @@ Time : <span id="timer"></span>
 <?php
 $dbcon=new dbcon();
 $conn=$dbcon->createConnection();
+$language=$_GET['id'];
 $id = isset($_GET['id'])?$_GET['id']:1;
 $qno=1;
 $count=0;
-$sql="SELECT * FROM `question` ";
+$sql="SELECT * FROM `question` WHERE `language`='$language' ";
 $data=mysqli_query($conn,$sql);
 while($row = mysqli_fetch_array($data))
 {   $count++;
@@ -83,6 +83,9 @@ while($row = mysqli_fetch_array($data))
 </div>
 
 <div style="text-align:center;margin-top:40px;">
+  <span class="step"></span>
+  <span class="step"></span>
+  <span class="step"></span>
   <span class="step"></span>
   <span class="step"></span>
   <span class="step"></span>

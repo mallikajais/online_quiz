@@ -21,7 +21,7 @@ session_start();
 
 <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="height:15vh;">
-        <a class="navbar-brand" href="#" style="color: #159cad;font-size: 55px;margin-top:-15px;">O<span style="color:white;">nline</span>Q<span style="color:white;">uiz</span>
+        <a class="navbar-brand" href="index.php" style="color: #159cad;font-size: 55px;margin-top:-15px;">O<span style="color:white;">nline</span>Q<span style="color:white;">uiz</span>
         <i class="fa fa-hourglass-start" aria-hidden="true" style="font-size:50px;"></i></a>
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
