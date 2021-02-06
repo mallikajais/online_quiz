@@ -20,12 +20,21 @@ class test extends dbcon{
     }
 
     public function addquestion($language,$question,$option1,$option2,$option3,$option4,$answer){
-        // $sql="SELECT `topic`.*,`question`.* FROM question JOIN topic ON `topic`.`topic` = `question`.`language` ";
+        
         $sql = "INSERT INTO question ( language,question,option1,option2,option3,option4,answer)
         VALUES ('$language','$question','$option1','$option2','$option3','$option4','$answer')";
         $data=$this->conn->query($sql);
         if ($data) {
             return $data;
+        }
+        return false;
+
+    }
+    public function addlanguage($technology){
+        $sql="INSERT INTO topic (topic,totalques) VALUES('$technology',10)";
+        $result=$this->conn->query($sql);
+        if($result){
+            return $result;
         }
         return false;
 

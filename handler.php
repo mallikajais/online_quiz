@@ -20,11 +20,18 @@ if(isset($_POST['email'])){
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
-// if(isset($_POST['next'])){
-//     $radiovalue=$_POST['check'];
-//     $answer=$_POST['answer'];
-//     echo $radiovalue;
-// }
+if(isset($_POST['technology'])){
+    $technology=$_POST['technology'];
+    echo $technology;
+    $data=$test->addlanguage($technology);
+    echo $data;
+    if($data!=false){
+        echo "New record created successfully";
+    }
+    else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
 
 if(isset($_POST['question'])){
     $question=$_POST['question'];

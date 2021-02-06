@@ -41,11 +41,17 @@ $conn=$dbcon->createConnection();
 $language=$_GET['id'];
 $id = isset($_GET['id'])?$_GET['id']:1;
 $qno=1;
-$count=0;
+// $count=0;
 $sql="SELECT * FROM `question` WHERE `language`='$language' ORDER BY RAND() ";
 $data=mysqli_query($conn,$sql);
 while($row = mysqli_fetch_array($data))
-{   $count++;
+{  
+  //  $count++;
+  // if($question==""){
+      
+  //   header('location:test.php');
+  // }
+  // else{
     $_SESSION['id'] = $row['id'];
     $question = $row['question'];
     $op1 = $row['option1'];
@@ -53,6 +59,7 @@ while($row = mysqli_fetch_array($data))
     $op3 = $row['option3'];
     $op4 = $row['option4'];
     $answer = $row['answer'];
+  // } 
 
 ?>
 
@@ -64,10 +71,10 @@ while($row = mysqli_fetch_array($data))
 
 <div class="tab">Question:
 <p><input class="inp" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" value="<?php echo $question; ?>" style="border:none;" ></p> <br>
-<p><input type="radio" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" name="question <?php echo $count;?>"  value="<?php echo $op1; ?>"/> <?php echo $op1; ?></p> 
-<p><input type="radio" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" name="question<?php echo $count;?>"  value="<?php echo $op2; ?>"/> <?php echo $op2; ?> </p>
-<p><input type="radio" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" name="question<?php echo $count;?>"  value="<?php echo $op3; ?>"/> <?php echo $op3; ?></p>
-<p><input type="radio" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" name="question<?php echo $count;?>"  value="<?php echo $op4; ?>"/> <?php echo $op4; ?></p>
+<p><input type="radio" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" name="question"  value="<?php echo $op1; ?>"/> <?php echo $op1; ?></p> 
+<p><input type="radio" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" name="question"  value="<?php echo $op2; ?>"/> <?php echo $op2; ?> </p>
+<p><input type="radio" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" name="question"  value="<?php echo $op3; ?>"/> <?php echo $op3; ?></p>
+<p><input type="radio" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" name="question"  value="<?php echo $op4; ?>"/> <?php echo $op4; ?></p>
   
 </div>
 <?php
@@ -98,6 +105,15 @@ while($row = mysqli_fetch_array($data))
 </form>
 <?php include 'footer.php' ;?>
 <script>
+$('input[type=radio]').change(function()
+{
+    if (this.checked)
+    {
+        $(this).closest('.tab')
+            .find('input[type=radio]').not(this)
+            .prop('checked', false);
+    }
+});
 var currentTab = 0; 
 showTab(currentTab); 
 

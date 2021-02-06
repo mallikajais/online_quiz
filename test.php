@@ -1,4 +1,4 @@
-<?php include "header.php"?>
+<?php include "head.php"?>
 <div style="height:60vh;margin-top:3%;">
 <table class=" table table-striped table-hover table-border text-center" style="width:70%;margin-top:10px;margin-left:15%;" id="search" >
             
@@ -7,7 +7,6 @@
                     <th>S.No</th>
                     <th>Topic</th>
                     <th>Total Questions</th>
-                   
                     <th>Action</th>
                     
                     </tr>
@@ -38,13 +37,13 @@
     </div>
 </div>
 <script> 
-$(document).ready(function() {
-      showTopic();
-});
-    function showTopic(){
-          $('#search').DataTable( {
-              "ajax": "handlerequest.php?showtopic=1"
-          } ); 
-    }
+// $(document).ready(function() {
+//       showTopic();
+// });
+//     function showTopic(){
+//           $('#search').DataTable( {
+//               "ajax": "handlerequest.php?showtopic=1"
+//           } ); 
+//     }
 </script>
 <?php include "footer.php"?>

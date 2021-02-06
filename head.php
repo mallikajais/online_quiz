@@ -15,13 +15,18 @@ session_start();
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body style="margin-right:0px;overflow-x: hidden">
 
 <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="height:15vh;">
-        <a class="navbar-brand" href="index.php" style="color: #159cad;font-size: 55px;margin-top:-15px;">O<span style="color:white;">nline</span>Q<span style="color:white;">uiz</span>
+        <a class="navbar-brand" href="#" style="color: #159cad;font-size: 55px;margin-top:-15px;">O<span style="color:white;">nline</span>Q<span style="color:white;">uiz</span>
         <i class="fa fa-hourglass-start" aria-hidden="true" style="font-size:50px;"></i></a>
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,8 +36,8 @@ session_start();
             <ul class="navbar-nav ml-auto">
             </ul> 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="signup.php" style="font-size:15px; color: white;"><span class="glyphicon glyphicon-user btn btn-info"></span>  Sign Up  </a></li>
-                <li><a href="login.php" style="font-size:15px; color: white;"><span class="glyphicon glyphicon-log-in btn btn-info" ></span>  Logout  </a></li>
+                <!-- <li><a href="#" style="font-size:15px; color: white;"><span class="glyphicon glyphicon-user btn btn-info"></span>  Sign Up  </a></li> -->
+                <li><a href="index.php" style="font-size:15px; color: white;"><span class="glyphicon glyphicon-log-in btn btn-info" ></span>  Logout  </a></li>
             </ul>
         </div>
     </nav>
