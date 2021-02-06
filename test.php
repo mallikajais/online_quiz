@@ -1,5 +1,5 @@
 <?php include "head.php"?>
-<div style="height:60vh;margin-top:3%;">
+<div style="margin-top:3%;margin-bottom:3%;">
 <table class=" table table-striped table-hover table-border text-center" style="width:70%;margin-top:10px;margin-left:15%;" id="search" >
             
                 <thead>
@@ -14,7 +14,7 @@
             <?php
                 
                 $conn = new mysqli('localhost', 'root', '','onlinetest');
-                $q="SELECT*from topic ";
+                $q="SELECT*from topic WHERE totalques=10";
                 $query=mysqli_query($conn,$q);
                 while($result=mysqli_fetch_array($query)){
                     $_SESSION['id']=$result["id"];

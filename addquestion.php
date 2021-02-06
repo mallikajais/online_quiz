@@ -30,14 +30,14 @@ $conn=$dbcon->createConnection();
             <label>option4</label>
             <input type="text" id="option4" name="option4" class="form-control"/>
             <label>Answer</label>
-            <input type="text" id="answer" name="answer" placeholder="answer" class="form-control"/>
-
+            <select id="answer" name="answer" class="form-control"></select>
+            
         </div>
 
     </form>
     <div style="margin-left:40%;margin-bottom:3%;">
         <input type="button" class="btn btn-info" id="add" name="add" value="Add Question"/>
-        <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-info"  value="Add Language">Add Language</button> -->
+        <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-info"  value="Add Language">Add Language</button> 
     
          <div class="modal" id="myModal">
     <div class="modal-dialog">
@@ -126,6 +126,23 @@ $(document).ready(function(){
                 });
             }
         })
+    })
+
+    $('#option1').focusout(function(){
+        var ans1=$(this).val();
+        $("#answer").append(`<option>${ans1}</option>`);
+    })
+    $('#option2').focusout(function(){
+        var ans1=$(this).val();
+        $("#answer").append(`<option>${ans1}</option>`);
+    })
+    $('#option3').focusout(function(){
+        var ans1=$(this).val();
+        $("#answer").append(`<option>${ans1}</option>`);
+    })
+    $('#option4').focusout(function(){
+        var ans1=$(this).val();
+        $("#answer").append(`<option>${ans1}</option>`);
     })
 </script>
 <?php include 'footer.php';?>

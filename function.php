@@ -31,7 +31,7 @@ class test extends dbcon{
 
     }
     public function addlanguage($technology){
-        $sql="INSERT INTO topic (topic,totalques) VALUES('$technology',10)";
+        $sql="INSERT INTO topic (topic,totalques) VALUES('$technology',1)";
         $result=$this->conn->query($sql);
         if($result){
             return $result;
